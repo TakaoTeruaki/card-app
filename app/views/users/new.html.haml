@@ -1,0 +1,26 @@
+.contents.row
+  .container
+    = form_with(model: @user, local: true) do |form|
+      %h3
+        新規ユーザー登録
+      = form.text_field :name, placeholder: "名前"
+      %br/
+      = form.text_field :mail, placeholder: "メールアドレス"
+      %br/
+      = form.text_field :password, placeholder: "パスワード"
+      %br/
+      = form.text_field :gender, placeholder: "性別"
+      %br/
+      = form.text_field :gender, placeholder: "年齢"
+      %br/
+      %label
+        %input{:name => "RadioGroup1", :type => "radio", :value => "0"}>/
+        男性
+        = succeed "\u5973\u6027" do
+          %input{:name => "RadioGroup1", :type => "radio", :value => "1"}/
+      %br/
+      = form.text_field :area, placeholder: "お住まいの地域"
+      %br/
+      = form.text_field :area, placeholder: "病歴"
+      %br/
+      = form.submit "登録"
