@@ -63,3 +63,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'compass-rails', '3.1.0'
 gem 'sprockets', '3.7.2'
+gem 'haml-rails'
+gem 'devise'
+
+group :development do 
+     gem 'rspec'
+end
+
+group :test do 
+     gem 'rspec'
+end
+
+group :production do 
+     gem 'unicorn'
+end
